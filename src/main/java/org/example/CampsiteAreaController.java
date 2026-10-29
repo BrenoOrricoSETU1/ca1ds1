@@ -1,5 +1,6 @@
 package org.example;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -49,5 +50,21 @@ public class CampsiteAreaController {
         stage.setScene(scene);
         stage.setTitle("Home");
         stage.show();
+    }
+
+    public void addCampingArea(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("addCampingArea.fxml"));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.setTitle("Add Camping Area");
+        stage.show();
+    }
+
+    @FXML
+    private void exit(){
+        System.exit(0);
     }
 }

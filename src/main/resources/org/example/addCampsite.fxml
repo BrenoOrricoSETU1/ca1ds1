@@ -21,5 +21,6 @@
       <TextField fx:id="nameField" layoutX="75.0" layoutY="73.0" />
       <Button layoutX="505.0" layoutY="354.0" mnemonicParsing="false" onAction="#backToHome" text="Home Page" />
       <Button layoutX="16.0" layoutY="270.0" mnemonicParsing="false" onAction="#addCampsite" text="Add" />
+      <Button layoutX="20.0" layoutY="355.0" mnemonicParsing="false" onAction="#backToCampsiteArea" text="Back" />
    </children>
 </Pane>

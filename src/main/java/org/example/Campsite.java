@@ -7,6 +7,8 @@ public class Campsite {
     private String campsiteContact;
     private String facilities;
 
+    private CampingAreaList campingAreas = new CampingAreaList();
+
     public Campsite(String campsiteName, String campsiteAddress, int stars, String campsiteContact, String facilities) {
         this.campsiteName = campsiteName;
         this.campsiteAddress = campsiteAddress;
@@ -29,6 +31,10 @@ public class Campsite {
     }
     public String getFacilities() {
         return facilities;
+    }
+
+    public CampingAreaList getCampingAreas(){
+        return campingAreas;
     }
 
     @Override
