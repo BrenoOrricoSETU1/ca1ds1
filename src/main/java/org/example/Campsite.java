@@ -33,6 +33,6 @@ public class Campsite {
 
     @Override
     public String toString() {
-        return "Campsite: " + campsiteName + "- " + campsiteAddress + "- " + stars + "- " + campsiteContact ;
+        return "Campsite: " + campsiteName + "- Location: " + campsiteAddress + "- Stars: " + stars + "- Contact: " + campsiteContact ;
     }
 }

@@ -22,4 +22,13 @@ public class CampsiteList {
         }
         return output;
     }
+
+    public Campsite findCampsiteByName(String name){
+        for(CampsiteNode current = head; current != null; current = current.getNext()){
+            if(current.getData().getCampsiteName().equalsIgnoreCase(name)){
+                return current.getData();
+            }
+        }
+        return null;
+    }
 }

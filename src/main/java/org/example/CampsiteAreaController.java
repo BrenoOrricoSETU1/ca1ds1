@@ -26,8 +26,14 @@ public class CampsiteAreaController {
     }
 
     @FXML
-    private void displayCampsites() {
+    private void displayCampsites() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("displayCampsites.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
 
+        stage.setScene(scene);
+        stage.setTitle("Display Campsites");
+        stage.show();
     }
 
     @FXML
