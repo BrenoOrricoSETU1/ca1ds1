@@ -9,7 +9,7 @@ public class CampsiteData {
                 "Pleasant View",
                 "1939 Somewhere Over the Rainbow",
                 5,
-                "678 9998212",
+                "678 999 8212",
                 "Gym, Local Shop, Laundry"
         );
         CampingArea area1 = new CampingArea("PVA1", "Family Area");
@@ -48,6 +48,7 @@ public class CampsiteData {
         CampingArea area3 = new CampingArea("H1", "Gryffindor Common Grounds");
         Plot plot5 = new Plot("HP1", "Fixed", true, 500, 1000, 15000, "Magic Fireplace, Enchanted Beds, House Elf Service", 0, "");
 
+        //TO DO: HAVE TO FIX THIS LATER ON, IT IS NOT GETTING THE OTHER CAMPING AREAS aaaaaaaaaaaaaaargh
         area1.getPlots().addPlot(plot1);
         area1.getPlots().addPlot(plot2);
         campsite1.getCampingAreas().addCampingArea(area1);

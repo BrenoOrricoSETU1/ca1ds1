@@ -63,6 +63,17 @@ public class CampsiteAreaController {
         stage.show();
     }
 
+    public void addPlot(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("addPlot.fxml"));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.setTitle("Add Plot");
+        stage.show();
+    }
+
     @FXML
     private void exit(){
         System.exit(0);

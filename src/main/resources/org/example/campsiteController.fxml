@@ -34,5 +34,6 @@
       <ButtonBar layoutX="61.0" layoutY="230.0" prefHeight="40.0" prefWidth="200.0" />
       <Button layoutX="14.0" layoutY="166.0" mnemonicParsing="false" onAction="#addCampingArea" text="Add Camping Area to Campsite" />
       <Button layoutX="14.0" layoutY="352.0" mnemonicParsing="false" onAction="#backToHome" text="Home Page" />
+      <Button layoutX="14.0" layoutY="205.0" mnemonicParsing="false" onAction="#addPlot" text="Add Plot to Camping Area" />
    </children>
 </Pane>

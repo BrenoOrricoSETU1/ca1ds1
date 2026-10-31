@@ -30,4 +30,17 @@ public class CampingAreaList {
     }
 
 
+    public CampingArea findCampingAreaById(String id) {
+        CampingAreaNode current = head;
+
+        while (current != null) {
+            if(current.getData().getDescription().equalsIgnoreCase(id)){
+                return current.getData();
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
+
+
 }

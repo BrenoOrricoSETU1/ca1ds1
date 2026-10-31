@@ -28,7 +28,7 @@ public class CampsiteList {
                 output += campingArea + "\n";
 
                 for (PlotNode plotNode = areaNode.getData().getPlots().getHead(); plotNode != null;  plotNode = plotNode.getNext()){
-                    output += plotNode + "\n";
+                    output += plotNode.getData() + "\n";
                 }
             }
             output += "\n";

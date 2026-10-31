@@ -23,8 +23,12 @@ public class CampingArea {
         return plots;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     @Override
     public String toString() {
-        return "Area ID: " + areaID + ", description: " + description;
+        return "ID: " + areaID + "\n" + "Description: " + description;
     }
 }

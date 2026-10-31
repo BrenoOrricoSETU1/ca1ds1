@@ -29,4 +29,9 @@ public class HomePageController {
         stage.setTitle("Guest Area");
         stage.show();
     }
+
+    @FXML
+    private void exit(){
+        System.exit(0);
+    }
 }
