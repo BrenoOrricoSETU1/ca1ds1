@@ -4,6 +4,7 @@ public class CampingArea {
 
     private String areaID;
     private String description;
+    private PlotList plots = new PlotList();
 
     public CampingArea(String areaID, String description) {
         this.areaID = areaID;
@@ -16,6 +17,10 @@ public class CampingArea {
 
     public void setAreaID(String areaID) {
         this.areaID = areaID;
+    }
+
+    public PlotList getPlots() {
+        return plots;
     }
 
     @Override

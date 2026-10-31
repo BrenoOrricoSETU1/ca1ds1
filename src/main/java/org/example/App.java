@@ -17,6 +17,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+
+        CampsiteData.defaultCampsites();
+        
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("HomePageController.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());

@@ -9,8 +9,9 @@ public class CampingAreaList {
         if(head == null){
             head = newNode;
         } else {
-            CampingAreaNode current;
-            for (current = head; current.getNext() != null; current = current.getNext()) {
+            CampingAreaNode current = head;
+            while (current.getNext() != null){
+                current = current.getNext();
             }
             current.setNext(newNode);
         }
@@ -22,6 +23,10 @@ public class CampingAreaList {
             output += current.getData() + "\n";
         }
         return output;
+    }
+
+    public CampingAreaNode getHead(){
+        return head;
     }
 
 

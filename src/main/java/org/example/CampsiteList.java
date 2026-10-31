@@ -8,8 +8,9 @@ public class CampsiteList {
         if (head == null) {
             head = newNode;
         } else{
-            CampsiteNode current;
-            for(current = head; current.getNext() != null; current=current.getNext()){
+            CampsiteNode current = head;
+            while (current.getNext() != null){
+                current = current.getNext();
             }
             current.setNext(newNode);
         }
@@ -17,8 +18,20 @@ public class CampsiteList {
 
     public String displayCampsites(){
         String output = "";
-        for(CampsiteNode current = head; current != null; current = current.getNext()){
-            output += current.getData() + "\n";
+
+        for(CampsiteNode campsiteNode = head; campsiteNode != null; campsiteNode = campsiteNode.getNext()){
+            Campsite campsite = campsiteNode.getData();
+            output += campsite + "\n";
+
+            for(CampingAreaNode areaNode = campsite.getCampingAreas().getHead(); areaNode != null; areaNode = areaNode.getNext()){
+                CampingArea campingArea = areaNode.getData();
+                output += campingArea + "\n";
+
+                for (PlotNode plotNode = areaNode.getData().getPlots().getHead(); plotNode != null;  plotNode = plotNode.getNext()){
+                    output += plotNode + "\n";
+                }
+            }
+            output += "\n";
         }
         return output;
     }
