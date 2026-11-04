@@ -55,8 +55,8 @@ public class AddGuestController {
     }
 
     @FXML
-    private void backToCampsiteArea() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("campsiteController.fxml"));
+    private void backToGuestArea() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("guestController.fxml"));
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();

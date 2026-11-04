@@ -26,4 +26,15 @@ public class GuestList {
         }
         return output;
     }
+
+    public Guest findGuestByName(String guestName){
+        GuestNode current = head;
+        while(current != null){
+            if(current.getData().getGuestName().equalsIgnoreCase(guestName)){
+                return current.getData();
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
 }

@@ -25,6 +25,22 @@ public class GuestAreaController {
     }
 
     public void viewGuests() throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("displayGuests.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("View Guests");
+        stage.show();
+    }
+
+    public void searchGuest() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("searchGuest.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Search Guests");
+        stage.show();
     }
 
     public void searchBooking() throws IOException{
