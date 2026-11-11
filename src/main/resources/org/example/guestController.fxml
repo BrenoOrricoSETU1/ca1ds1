@@ -29,14 +29,16 @@
         </menus>
       </MenuBar>
       <Label layoutX="232.0" layoutY="28.0" text="Guest Management Area" />
-      <Button layoutX="14.0" layoutY="60.0" mnemonicParsing="false" onAction="#addGuest" text="New Guest" />
+      <Button layoutX="14.0" layoutY="67.0" mnemonicParsing="false" onAction="#addGuest" text="New Guest" />
       <Button layoutX="14.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewGuests" text="View Guests" />
-      <Button layoutX="368.0" layoutY="109.0" mnemonicParsing="false" onAction="#searchBooking" text="Search a Booking" />
+      <Button layoutX="368.0" layoutY="154.0" mnemonicParsing="false" onAction="#searchBooking" text="Search a Booking" />
       <Button layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#removeGuest" text="Remove Guest" />
-      <Button layoutX="368.0" layoutY="154.0" mnemonicParsing="false" onAction="#cancelBooking" text="Cancel a Booking" />
-      <Button layoutX="368.0" layoutY="60.0" mnemonicParsing="false" onAction="#addBooking" text="Add a Booking" />
-      <Button layoutX="510.0" layoutY="361.0" mnemonicParsing="false" onAction="#backToHome" text="Home Page" />
-      <Separator layoutX="297.0" layoutY="58.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Button layoutX="368.0" layoutY="200.0" mnemonicParsing="false" onAction="#cancelBooking" text="Cancel a Booking" />
+      <Button layoutX="368.0" layoutY="67.0" mnemonicParsing="false" onAction="#addBooking" text="Add a Booking" />
+      <Button layoutX="12.0" layoutY="360.0" mnemonicParsing="false" onAction="#backToHome" text="Home Page" />
+      <Separator layoutX="297.0" layoutY="58.0" orientation="VERTICAL" prefHeight="246.0" prefWidth="0.0" />
       <Button layoutX="14.0" layoutY="154.0" mnemonicParsing="false" onAction="#searchGuest" text="Search Guest" />
+      <Button layoutX="368.0" layoutY="110.0" mnemonicParsing="false" onAction="#viewBookings" text="View Bookings" />
+      <Button layoutX="368.0" layoutY="243.0" mnemonicParsing="false" onAction="#findPlot" text="Find the Best Plot" />
    </children>
 </Pane>

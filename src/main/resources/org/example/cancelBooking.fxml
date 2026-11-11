@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.CancelBookingController">
+   <children>
+      <Label layoutX="257.0" layoutY="14.0" text="Cancel Booking" />
+      <TextArea fx:id="displayBookings" layoutX="100.0" layoutY="48.0" prefHeight="186.0" prefWidth="466.0" />
+      <Label layoutX="14.0" layoutY="48.0" text="Bookings List" />
+      <Label layoutX="14.0" layoutY="253.0" text="Booking ID" />
+      <TextField fx:id="bookingIdField" layoutX="100.0" layoutY="248.0" />
+      <Button layoutX="278.0" layoutY="249.0" mnemonicParsing="false" onAction="#cancelBooking" text="Cancel Booking" />
+      <Label fx:id="resultLabel" layoutX="100.0" layoutY="287.0" prefHeight="43.0" prefWidth="159.0" />
+      <Button layoutX="23.0" layoutY="355.0" mnemonicParsing="false" onAction="#backToGuestArea" text="Back" />
+      <Button layoutX="505.0" layoutY="355.0" mnemonicParsing="false" onAction="#backToHome" text="Home Page" />
+   </children>
+</Pane>

@@ -44,6 +44,30 @@ public class GuestAreaController {
     }
 
     public void searchBooking() throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("searchBookings.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Search Bookings");
+        stage.show();
+    }
+
+    public void viewBookings() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("displayBookings.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("View Bookings");
+        stage.show();
+    }
+
+    public void findPlot() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("findPlot.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Find Plot");
+        stage.show();
     }
 
     public void removeGuest() throws IOException {
@@ -56,6 +80,12 @@ public class GuestAreaController {
     }
 
     public void cancelBooking() throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("cancelBooking.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Cancel Booking");
+        stage.show();
     }
 
     public void addBooking() throws IOException{

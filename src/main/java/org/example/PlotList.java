@@ -44,4 +44,13 @@ public class PlotList {
         return null;
     }
 
+    public String displayPlots(){
+        String output = "";
+
+        for(PlotNode current = head; current != null; current = current.getNext()){
+            Plot plot = current.getData();
+            output += plot + "\n";
+        }
+        return output;
+    }
 }

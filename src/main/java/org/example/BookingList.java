@@ -30,6 +30,28 @@ public class BookingList {
         return output;
     }
 
+    public boolean cancelBooking(String bookingId){
+        if(head == null){
+            return false;
+        }
+        if(head.getData().getBookingId().equalsIgnoreCase(bookingId)){
+            head = head.getNext();
+            return true;
+        }
+
+        BookingNode current = head;
+
+        while(current.getNext() != null) {
+            if(current.getData().getBookingId().equalsIgnoreCase(bookingId)){
+                current.setNext(current.getNext().getNext());
+                return true;
+            }
+
+            current = current.getNext();
+        }
+        return false;
+    }
+
     public boolean isPlotBooked(String plotId, String startDate, String endDate) {
         LocalDate newStartDate = LocalDate.parse(startDate);
         LocalDate newEndDate = LocalDate.parse(endDate);
@@ -51,6 +73,23 @@ public class BookingList {
         }
         return false;
     }
+
+    public String displayBookingsByGuestId(String guestId){
+        String output = "";
+        BookingNode current = head;
+
+        while(current != null) {
+            if(current.getData().getGuestId().equalsIgnoreCase(guestId)) {
+                output = current.getData().toString() + "\n";
+            }
+            current = current.getNext();
+        }
+        if(output.equals("")){
+            return "No bookings yet";
+        }
+        return output;
+    }
+
     public BookingNode getHead() {
         return head;
     }
