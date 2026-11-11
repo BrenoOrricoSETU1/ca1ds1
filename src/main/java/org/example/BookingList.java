@@ -90,6 +90,41 @@ public class BookingList {
         return output;
     }
 
+    public String findBookingByPlotId(String plotId){
+        String output = "";
+        BookingNode current = head;
+
+        while(current != null) {
+            if(current.getData().getPlotId().equalsIgnoreCase(plotId)) {
+                output = current.getData().toString() + "\n";
+            }
+            current = current.getNext();
+        }
+        return output;
+    }
+
+    public String reassignBooking(String removedPlotId, Campsite campsite){
+        BookingNode current = head;
+        String output = "";
+
+        while(current != null) {
+            Booking booking = current.getData();
+            if(booking.getPlotId().equalsIgnoreCase(removedPlotId)) {
+                Plot alternative = campsite.findAlternativePlot(removedPlotId, booking.getPrefType(), booking.getMinSize(), booking.getMinBedrooms(), booking.getBudget());
+
+                if(alternative != null){
+                    booking.setPlotId(alternative.getPlotId());
+
+                    output += "Booking " + booking.getBookingId() + " moved to: " + alternative.getPlotId();
+                } else{
+                    output += "Booking: " + booking.getBookingId() + " could not be reassign\n";
+                }
+            }
+            current = current.getNext();
+        }
+        return output;
+    }
+
     public BookingNode getHead() {
         return head;
     }

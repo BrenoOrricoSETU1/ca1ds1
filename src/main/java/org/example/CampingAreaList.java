@@ -34,7 +34,7 @@ public class CampingAreaList {
         CampingAreaNode current = head;
 
         while (current != null) {
-            if(current.getData().getDescription().equalsIgnoreCase(id)){
+            if(current.getData().getAreaID().equalsIgnoreCase(id)){
                 return current.getData();
             }
             current = current.getNext();

@@ -53,4 +53,25 @@ public class PlotList {
         }
         return output;
     }
+
+    public boolean removePlot(String plotId){
+        if(head == null){
+            return false;
+        }
+
+        if(head.getData().getPlotId().equals(plotId)){
+            head = head.getNext();
+            return true;
+        }
+
+        PlotNode current = head;
+        while(current.getNext() != null){
+            if(current.getData().getPlotId().equalsIgnoreCase(plotId)){
+                current.setNext(current.getNext().getNext());
+                return true;
+            }
+            current = current.getNext();
+        }
+        return false;
+    }
 }

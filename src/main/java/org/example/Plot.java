@@ -115,7 +115,7 @@ public class Plot {
 
     @Override
     public String toString() {
-        return "Type: " + type + "\n€" + costPerNight + " per night";
+        return "Plot ID: " + plotId + "Type: " + type + "\n€" + costPerNight + " per night";
     }
 }
 

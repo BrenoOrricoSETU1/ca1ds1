@@ -75,6 +75,15 @@ public class CampsiteAreaController {
         stage.show();
     }
 
+    public void removePlot(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("removePlot.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Remove Plot");
+        stage.show();
+    }
+
     @FXML
     private void exit(){
         System.exit(0);
