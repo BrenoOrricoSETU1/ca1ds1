@@ -14,10 +14,11 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    public static Stage stage;
 
     @Override
     public void start(Stage stage) throws IOException {
-
+        App.stage = stage;
         CampsiteData.defaultCampsites();
 
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("HomePageController.fxml"));

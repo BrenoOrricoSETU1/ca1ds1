@@ -20,4 +20,28 @@ public class PlotList {
         return head;
     }
 
+    public Plot findPlotById(String id){
+        PlotNode current = head;
+
+        while(current != null){
+            if(current.getData().getPlotId().equals(id)){
+                return current.getData();
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
+
+    public Plot findSuitablePlot(String prefType, boolean powered, double minSize, double minBedrooms, double budget) {
+        PlotNode current = head;
+        while (current != null){
+            Plot plot = current.getData();
+            if(plot.getType().equals(prefType) && plot.isPowered() == powered && plot.getSize() >= minSize && plot.getBedrooms() >= minBedrooms && plot.getCostPerNight() <= budget){
+                return plot;
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
+
 }

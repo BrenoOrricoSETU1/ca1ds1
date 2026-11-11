@@ -94,6 +94,25 @@ public class Plot {
         this.photoUrl = photoUrl;
     }
 
+    public boolean matchesBooking(String prefType, boolean powered, double minSize, int minBedrooms, double budget) {
+        if(!type.equalsIgnoreCase(prefType)){
+            return false;
+        }
+        if(this.powered != powered){
+            return false;
+        }
+        if(size < minSize){
+            return false;
+        }
+        if(bedrooms < minBedrooms){
+            return false;
+        }
+        if(costPerNight > budget){
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public String toString() {
         return "Type: " + type + "\n€" + costPerNight + " per night";

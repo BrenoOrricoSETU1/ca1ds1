@@ -21,9 +21,10 @@ public class CampsiteAreaController {
         Stage stage = new Stage();
         Scene scene = new Scene(root);
 
-        stage.setScene(scene);
-        stage.setTitle("Add Campsite");
-        stage.show();
+// have a look on that later
+        App.stage.setScene(scene);
+        App.stage.setTitle("Add Campsite");
+        App.stage.show();
     }
 
     @FXML

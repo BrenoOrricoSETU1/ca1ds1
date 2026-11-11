@@ -47,12 +47,24 @@ public class GuestAreaController {
     }
 
     public void removeGuest() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("removeGuest.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Remove Guest");
+        stage.show();
     }
 
     public void cancelBooking() throws IOException{
     }
 
     public void addBooking() throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("addBooking.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Add Booking");
+        stage.show();
     }
 
     @FXML
