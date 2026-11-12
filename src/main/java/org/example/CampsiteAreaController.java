@@ -21,10 +21,9 @@ public class CampsiteAreaController {
         Stage stage = new Stage();
         Scene scene = new Scene(root);
 
-// have a look on that later
-        App.stage.setScene(scene);
-        App.stage.setTitle("Add Campsite");
-        App.stage.show();
+        stage.setScene(scene);
+        stage.setTitle("Add Campsite");
+        stage.show();
     }
 
     @FXML
@@ -84,8 +83,69 @@ public class CampsiteAreaController {
         stage.show();
     }
 
+    public void browseCampsites(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("browseCampsites.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Browse Campsites");
+        stage.show();
+    }
+
     @FXML
     private void exit(){
         System.exit(0);
+    }
+
+    @FXML
+    private void saveData(){
+
+        DataStore dataStore = new DataStore();
+
+        try {
+            dataStore.save();
+            System.out.println("Data saved successfully");
+        } catch (Exception e) {
+            System.err.println("Error saving data: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void loadData(){
+        DataStore dataStore = new DataStore();
+        try{
+            dataStore.load();
+            System.out.println("Data loaded successfully");
+        } catch (Exception e) {
+            System.err.println("Error loading data");
+        }
+    }
+
+    @FXML
+    private void openCampsiteArea() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("campsiteController.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Campsite Area");
+        stage.show();
+    }
+
+    @FXML
+    private void openGuestArea() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("guestController.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Guest Area");
+        stage.show();
+    }
+
+    @FXML
+    private void reset() {
+        CampsiteData.campsites.reset();
+        GuestData.guests.reset();
+        BookingData.bookings.reset();
     }
 }

@@ -24,7 +24,10 @@ public class SearchGuestController {
         Guest guest = GuestData.guests.findGuestByName(name);
 
         if(guest != null){
-            guestDisplay.setText(guest.toString());
+            String result = guest.toString();
+            result += "\nBookings: \n";
+            result+= BookingData.bookings.displayBookingsByGuestId(guest.getGuestId());
+            guestDisplay.setText(result);
         } else{
             guestDisplay.setText("No guest found");
         }

@@ -58,6 +58,6 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Name: " + guestName + " -> ID: " + guestId + "\nD.O.B: " + guestDOB + "\nContact: " + guestContact + "\nAdditional Info: " + guestAdditionalInfo + "\n";
+        return "Name: " + guestName + " -> ID: " + guestId + "\nD.O.B: " + guestDOB + "\nContact: " + guestContact + "\nAdditional Info: " + guestAdditionalInfo + "\n________________";
     }
 }

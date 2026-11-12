@@ -49,7 +49,7 @@ public class BookingListTest {
         BookingList bookingList = new BookingList();
         assertFalse(bookingList.cancelBooking("B999"));
     }
-    
+
     @Test
     public void testDisplayBookingsByGuestId(){
 

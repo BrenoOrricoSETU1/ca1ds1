@@ -62,7 +62,7 @@ public class GuestAreaController {
     }
 
     public void findPlot() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("findPlot.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("findBestPlot.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -115,5 +115,55 @@ public class GuestAreaController {
         stage.setScene(scene);
         stage.setTitle("Home");
         stage.show();
+    }
+
+    @FXML
+    private void saveData(){
+        DataStore dataStore = new DataStore();
+
+        try{
+            dataStore.save();
+            System.out.println("Data saved successfully");
+        } catch (Exception e) {
+            System.err.println("Error saving data");
+        }
+    }
+
+    @FXML
+    private void loadData(){
+        DataStore dataStore = new DataStore();
+        try{
+            dataStore.load();
+            System.out.println("Data loaded successfully");
+        } catch (Exception e) {
+            System.err.println("Error loading data");
+        }
+    }
+
+    @FXML
+    private void openCampsiteArea() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("campsiteController.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Campsite Area");
+        stage.show();
+    }
+
+    @FXML
+    private void openGuestArea() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("guestController.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Guest Area");
+        stage.show();
+    }
+
+    @FXML
+    private void reset() {
+        CampsiteData.campsites.reset();
+        GuestData.guests.reset();
+        BookingData.bookings.reset();
     }
 }

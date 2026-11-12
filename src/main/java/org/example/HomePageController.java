@@ -34,4 +34,34 @@ public class HomePageController {
     private void exit(){
         System.exit(0);
     }
+
+    @FXML
+    private void saveData(){
+        DataStore dataStore = new DataStore();
+
+        try{
+            dataStore.save();
+            System.out.println("Data saved successfully");
+        } catch (Exception e) {
+            System.err.println("Error saving data");
+        }
+    }
+
+    @FXML
+    private void loadData(){
+        DataStore dataStore = new DataStore();
+        try{
+            dataStore.load();
+            System.out.println("Data loaded successfully");
+        } catch (Exception e) {
+            System.err.println("Error loading data");
+        }
+    }
+
+    @FXML
+    private void reset() {
+        CampsiteData.campsites.reset();
+        GuestData.guests.reset();
+        BookingData.bookings.reset();
+    }
 }

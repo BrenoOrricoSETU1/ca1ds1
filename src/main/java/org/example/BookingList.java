@@ -128,4 +128,8 @@ public class BookingList {
     public BookingNode getHead() {
         return head;
     }
+
+    public void reset(){
+        head = null;
+    }
 }

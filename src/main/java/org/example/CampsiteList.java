@@ -133,4 +133,12 @@ public class CampsiteList {
 
         return "There is no plot that matches your preferences";
     }
+
+    public void reset(){
+        head = null;
+    }
+
+    public CampsiteNode getHead() {
+        return head;
+    }
 }

@@ -1,0 +1,140 @@
+<object-stream>
+  <org.example.AppData>
+    <campsites>
+      <head>
+        <data>
+          <campsiteName>Pleasant View</campsiteName>
+          <campsiteAddress>1939 Somewhere Over the Rainbow</campsiteAddress>
+          <stars>5</stars>
+          <campsiteContact>678 999 8212</campsiteContact>
+          <facilities>Gym, Local Shop, Laundry</facilities>
+          <campingAreas>
+            <head>
+              <data>
+                <areaID>PVA1</areaID>
+                <description>Family Area</description>
+                <plots>
+                  <head>
+                    <data>
+                      <plotId>PVP1</plotId>
+                      <type>Fixed</type>
+                      <powered>true</powered>
+                      <bedrooms>5</bedrooms>
+                      <beds>10</beds>
+                      <size>80.0</size>
+                      <facilities>WiFi, Air Conditioner Unit</facilities>
+                      <costPerNight>120.0</costPerNight>
+                      <photoUrl></photoUrl>
+                    </data>
+                    <next>
+                      <data>
+                        <plotId>PVP2</plotId>
+                        <type>Touring</type>
+                        <powered>false</powered>
+                        <bedrooms>0</bedrooms>
+                        <beds>0</beds>
+                        <size>100.0</size>
+                        <facilities>Cold Drink, Sun Glasses, Sun Cream</facilities>
+                        <costPerNight>15.0</costPerNight>
+                        <photoUrl></photoUrl>
+                      </data>
+                    </next>
+                  </head>
+                </plots>
+              </data>
+            </head>
+          </campingAreas>
+        </data>
+        <next>
+          <data>
+            <campsiteName>Anor Londo</campsiteName>
+            <campsiteAddress>1 Firelink Shrine, Lordran</campsiteAddress>
+            <stars>4</stars>
+            <campsiteContact>000 666 6769</campsiteContact>
+            <facilities>Bonfire, Blacksmith, Cathedral, Sunlight Altar</facilities>
+            <campingAreas>
+              <head>
+                <data>
+                  <areaID>PVA2</areaID>
+                  <description>Sunlight Warriors Area</description>
+                  <plots>
+                    <head>
+                      <data>
+                        <plotId>ALP1</plotId>
+                        <type>Fixed</type>
+                        <powered>true</powered>
+                        <bedrooms>4</bedrooms>
+                        <beds>8</beds>
+                        <size>300.0</size>
+                        <facilities>Estus Flask, Praise the Sun</facilities>
+                        <costPerNight>150.0</costPerNight>
+                        <photoUrl></photoUrl>
+                      </data>
+                      <next>
+                        <data>
+                          <plotId>ALP2</plotId>
+                          <type>Touring</type>
+                          <powered>false</powered>
+                          <bedrooms>0</bedrooms>
+                          <beds>0</beds>
+                          <size>300.0</size>
+                          <facilities>Silver Knight Security, Gorgeous View</facilities>
+                          <costPerNight>30.0</costPerNight>
+                          <photoUrl></photoUrl>
+                        </data>
+                      </next>
+                    </head>
+                  </plots>
+                </data>
+              </head>
+            </campingAreas>
+          </data>
+          <next>
+            <data>
+              <campsiteName>Hogwarts</campsiteName>
+              <campsiteAddress>9¾ King&apos;s Cross, London, England</campsiteAddress>
+              <stars>5</stars>
+              <campsiteContact>000 934 1997</campsiteContact>
+              <facilities>Great Hall, Buterbeer Bar, Quidditch Picth, Owl Post, not-WiFi</facilities>
+              <campingAreas>
+                <head>
+                  <data>
+                    <areaID>H1</areaID>
+                    <description>Gryffindor Common Grounds</description>
+                    <plots>
+                      <head>
+                        <data>
+                          <plotId>HP1</plotId>
+                          <type>Fixed</type>
+                          <powered>true</powered>
+                          <bedrooms>500</bedrooms>
+                          <beds>1000</beds>
+                          <size>15000.0</size>
+                          <facilities>Magic Fireplace, Enchanted Beds, House Elf Service</facilities>
+                          <costPerNight>0.0</costPerNight>
+                          <photoUrl></photoUrl>
+                        </data>
+                      </head>
+                    </plots>
+                  </data>
+                </head>
+              </campingAreas>
+            </data>
+            <next>
+              <data>
+                <campsiteName>Test</campsiteName>
+                <campsiteAddress>Test</campsiteAddress>
+                <stars>4</stars>
+                <campsiteContact>12345678</campsiteContact>
+                <facilities>Test</facilities>
+                <campingAreas/>
+              </data>
+            </next>
+          </next>
+        </next>
+      </head>
+    </campsites>
+    <guests/>
+    <bookings/>
+  </org.example.AppData>
+</object-stream>

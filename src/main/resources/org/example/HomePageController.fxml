@@ -13,16 +13,16 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Load" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Reset System" />
+              <MenuItem mnemonicParsing="false" onAction="#saveData" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#loadData" text="Load" />
+                  <MenuItem mnemonicParsing="false" onAction="#reset" text="Reset" />
                   <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
             <items>
-              <MenuItem mnemonicParsing="false" text="Campistes" />
-                  <MenuItem mnemonicParsing="false" text="Guests" />
+              <MenuItem mnemonicParsing="false" onAction="#openCampsiteArea" text="Campistes" />
+                  <MenuItem mnemonicParsing="false" onAction="#openGuestArea" text="Guests" />
             </items>
           </Menu>
         </menus>

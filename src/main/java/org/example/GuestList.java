@@ -23,6 +23,7 @@ public class GuestList {
         for(GuestNode current = head; current != null; current = current.getNext()){
             Guest guest = current.getData();
             output += guest + "\n";
+            output += BookingData.bookings.displayBookingsByGuestId(guest.getGuestId());
         }
         return output;
     }
@@ -68,5 +69,9 @@ public class GuestList {
             current = current.getNext();
         }
         return false;
+    }
+
+    public void reset(){
+        head = null;
     }
 }
